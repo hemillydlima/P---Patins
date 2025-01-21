@@ -1,11 +1,11 @@
-header{
+.header{
     max-width:80rem;
     width: 100%;
     padding:20px 32px 20px 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
+    margin-inline: auto;
 
      img{
         width:2rem;

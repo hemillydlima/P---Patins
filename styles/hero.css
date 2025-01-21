@@ -1,0 +1,202 @@
+section.hero {
+    max-width: 80rem;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    margin-inline: auto;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+
+    main{
+        margin-top: 143px;
+    }
+
+    h1 div{
+        display: inline-block;
+        height: 5rem;
+        overflow:hidden;
+        width: min-content;
+        vertical-align: bottom;
+    }
+    h1 span{
+        /* border: solid red; */
+        display: block;
+
+        animation: title 6s infinite ;
+
+        
+    }
+
+    h1 span:nth-child(1){
+        color: var(--sky);
+    }
+    h1 span:nth-child(2){
+        color: var(--joy);
+    }
+    h1 span:nth-child(3){
+        color: var(--leaf);
+    }
+    h1 span:nth-child(4){
+        color: var(--sky);
+    }
+
+    /* BUTTONS */
+
+    & .buttons{
+       
+        display: flex;
+        gap: 2rem;
+        margin-top: 3rem;
+        
+        & .button{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-radius: 80px;
+
+            transition: scale 400ms;
+
+            &.buy{
+                background-color: var(--sun);
+                padding: 24px 48px;
+            }
+            &.play span{
+                padding: 24px;
+                border-radius: 50%;
+                display: flex;
+            }
+            
+        }
+        & .shadow{
+            box-shadow: 
+            0px 2px 5px rgb(0 0 0 / .1),
+            0px 9px 9px rgb(0 0 0 / .09),
+            0px 21px 12px rgb(0 0 0 / .05),
+            0px 39px 15px rgb(0 0 0 / .02)
+            ;
+        }
+        & .button:hover{
+            scale: 1.1;
+        }
+
+    }
+
+    /* PATINS */
+
+  
+
+    & > div:nth-child(2){
+        display: block;
+        max-width: 488px;
+        width: 100%;
+        height: 488px;
+
+
+        & .content{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+        }
+        
+        & img{
+            position: absolute;
+            width: 100%;
+            /* transform: translateX(200px); */
+            
+        }
+        & img[src*="ellipse"]{
+            width: 94%;
+            top: 3%;
+            left: 3%;
+            transform: translateX(600px);
+            animation: patins 1.2s  200ms forwards ;
+        }
+        & img[src*="patins"]{
+            z-index: 1;
+            transform: translateX(550px);
+            animation: patins 1.5s  200ms forwards;
+        }
+        & img[src*="stars-1"]{
+            max-width: 88px;
+            top: 30%;
+            transform: translateX(550px);
+            animation: patins 1.2s  200ms forwards;
+        }
+        & img[src*="stars-2"]{
+            max-width: 40px;
+            bottom: 30%;
+            right: 0;
+            transform: translateX(200px);
+            animation: patins 1.2s  200ms forwards;
+        }
+
+    
+    }
+}
+@keyframes patins{
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes title {
+    /* radical static */
+    0%, 22% {
+        transform: translateY(0);
+    }
+    /* divertida in */
+    23% {
+        transform: translateY(calc(-5rem - 15px));
+    }
+    25%{
+        transform: translateY(calc(-5rem + 10px));
+    }
+    27%{
+        transform: translateY(calc(-5rem - 5px));
+    }
+    29%{
+        transform: translateY(calc(-5rem + 5px));
+    }
+
+    /* divertida static */
+    33%, 55% {
+        transform: translateY(-5rem);
+    }
+
+    /* saudavel in */
+    56%{
+        transform: translateY(calc(-10rem - 15px));
+    }
+    58%{
+        transform: translateY(calc(-10rem + 10px));
+    }
+    60%{
+        transform: translateY(calc(-10rem - 5px));
+    }
+    62%{
+        transform: translateY(calc(-10rem + 5px));
+    }
+
+    /* saudavel static */
+    66%, 88% {
+        transform: translateY(-10rem);
+    }
+
+    89%{
+        transform: translateY(calc(-15rem - 15px));
+    }
+    91%{
+        transform: translateY(calc(-15rem + 10px));
+    }
+    93%{
+        transform: translateY(calc(-15rem - 5px));
+    }
+    95%{
+        transform: translateY(calc(-15rem + 5px));
+    }
+
+    100% { 
+        transform: translateY(-15rem);  
+    }
+}
