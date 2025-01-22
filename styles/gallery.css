@@ -1,0 +1,110 @@
+.gallery{
+    max-width: 80rem;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    margin-inline: auto;
+
+    & header{
+        text-align: center;
+    }
+    & header span{
+        font: 500 14px/150% var(--montserrat-font);
+    }
+    & img{
+        width: 100%;
+        height: auto;
+    }
+    & .content{
+        margin-top: 2rem;
+        gap: 2.5rem;
+        display: grid;
+        grid-template-areas: 
+        "A B B"
+        "C C D";
+
+
+        & figure{
+            
+            position: relative;
+            overflow: hidden;
+            line-height: 0;
+            border-radius: 40px;
+            
+            animation: gallery 2s linear backwards;
+            
+            
+            
+            &:hover {
+                & > img{
+                    scale: 1.1;
+                    
+                }
+
+                & figcaption{
+                    transform: translateY(0);
+                    width: 100%;
+                }
+            }
+        }
+        
+        & figure > img{
+            height: 25rem;
+            object-fit: cover;
+            transition: scale 400ms;
+        }
+       
+
+        & figure:nth-child(1){
+            grid-area: A;
+        }
+        & figure:nth-child(2){
+            grid-area: B;
+        }
+        & figure:nth-child(3){
+            grid-area: C;
+        }
+        & figure:nth-child(4){
+            grid-area: D;
+        }
+    }
+    & figcaption{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        gap: .5rem;
+
+        border-radius: 0 0 40px 40px;
+
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+
+        transform: translateY(100%);
+        transition: transform 400ms;
+        
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--background);
+        background-image: linear-gradient(
+            to top,
+            rgb(0 0 0/ 0.6),
+            rgb(0 0 0 / 0)
+        );
+
+        & > img {
+            width: 2rem;
+        }
+    }
+    
+}
+@keyframes gallery{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
