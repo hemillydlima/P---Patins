@@ -1,0 +1,40 @@
+footer{
+    max-width: 80rem;
+    width: 100%;
+    margin-inline: auto;
+    padding: 4rem 2rem 2rem 2rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+
+    & .buttons{
+        
+        
+        & .button{
+            gap: 2rem;
+            font: 500 16px/150% var(--montserrat-font);
+            border: none;
+            background-color: var(--background);
+            
+        }
+        & button:nth-child(1){
+            margin-right: 2rem;
+        }
+        & button:nth-child(2){
+            margin-right: 2rem;
+        }
+    }
+    & .icons{
+
+        & img{
+
+            margin-left: 2rem; 
+        }
+       
+
+    }
+ 
+}
