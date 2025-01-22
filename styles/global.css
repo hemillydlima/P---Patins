@@ -26,9 +26,9 @@
 html,button{
     font:400 1rem/150% var(--montserrat-font) ;
 }
-html{
+/* html{
     zoom: 50%;
-}
+} */
 h1,h2{
     font-family:var(--syne-font);  
 }
